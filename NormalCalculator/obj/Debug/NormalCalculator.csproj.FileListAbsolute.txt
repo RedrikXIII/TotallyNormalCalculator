@@ -1,0 +1,8 @@
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\bin\Debug\NormalCalculator.exe.config
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\bin\Debug\NormalCalculator.exe
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\bin\Debug\NormalCalculator.pdb
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\obj\Debug\NormalCalculator.csproj.AssemblyReference.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\obj\Debug\NormalCalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\obj\Debug\NormalCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\obj\Debug\NormalCalculator.exe
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\NormalCalculator\NormalCalculator\obj\Debug\NormalCalculator.pdb
