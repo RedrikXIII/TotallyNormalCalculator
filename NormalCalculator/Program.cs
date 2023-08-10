@@ -68,6 +68,12 @@ namespace NormalCalculator
       Console.Write("|");
       string spaces = new string(' ', 28 - currentNumber.ToString().Length);
       Console.Write(spaces + currentNumber.ToString() + " |");
-    }
-  }
+      Console.SetCursorPosition(15, 11);
+      Console.Write("^");
+      Console.SetCursorPosition(15, 12);
+      Console.Write("|");
+      Console.SetCursorPosition(12, 13);
+      Console.Write("Press .");
+    }                               
+  }                              
 }
