@@ -19,6 +19,7 @@ namespace NormalCalculator
     static long bufferLong = 0;
     static int bufferInt = 0;
     static string bufferStr = "";
+    static bool alive2 = true;
 
     static void Main(string[] args)
     {
@@ -34,8 +35,13 @@ namespace NormalCalculator
         {
           ShowHackMenu();
         }
+        if (password == "12345")
+        {
+          InitializeEndSequence();
+          alive = false;
+        }
       }
-      Console.ReadKey();
+      while (alive2) { }
     }
 
     static string[,] keys = new string[4, 5]
@@ -199,6 +205,8 @@ namespace NormalCalculator
       int percentComplete = 0;
       string percentBar = "";
 
+      ClearSpace(35, 0, 45, 9);
+
       for (int i = 0; i < password.Length; i++)
       {
         if (password[i] != '1' && password[i] != '2' && password[i] != '3' && password[i] != '4' && password[i] != '5' && password[i] != '6' &&
@@ -245,9 +253,18 @@ namespace NormalCalculator
       Console.Write("#--------------------------#");
     }
 
+    static void ClearSpace(int startX, int startY, int width, int height)
+    {
+      for (int i = 0; i < height; i++)
+      {
+        Console.Write(new string(' ', width));
+        Console.SetCursorPosition(startX, startY + i);
+      }
+    }
+
     static void ShowHackMenu()
     {
-        DrawGlitchTab(0);
+        DrawGlitchTab(50);
         Console.SetCursorPosition(0, 0);
     }
 
@@ -270,6 +287,59 @@ namespace NormalCalculator
         }
       }
       password = bufferStr;
+    }
+
+    static async void InitializeEndSequence()
+    {
+      await Task.Delay(2000);
+      Console.ForegroundColor = ConsoleColor.Red;
+      ClearSpace(0, 0, 70, 90);
+
+      Console.SetCursorPosition(0, 0);
+      for (int i = 0; i <= 25; i++)
+      {
+        WriteErrorMessage("Initializing subroutine: VisualStudio.NormalCalculator.Error21Fix() ", 4, i);
+        await Task.Delay(70);
+      }
+      Console.WriteLine("Initializing subroutine: FATAL_ERROR;");
+      await Task.Delay(1000);
+      ClearSpace(0, 0, 80, 30);
+
+      Console.SetCursorPosition(0, 0);
+      for (int i = 0; i <= 50; i++)
+      {
+        WriteErrorMessage("Calling FBI: TypingTheNumber() ", 4, i);
+        await Task.Delay(70);
+      }
+      Console.WriteLine("Now RUN;");
+      await Task.Delay(3000);
+      ClearSpace(0, 0, 80, 70);
+
+      Console.SetCursorPosition(0, 0);
+      for (int i = 0; i <= 30; i++)
+      {
+        WriteErrorMessage("Wiping unexpected data: ", 4, i);
+        await Task.Delay(70);
+      }
+      await Task.Delay(1000);
+      ClearSpace(0, 0, 70, 40);
+
+      Console.SetCursorPosition(0, 0);
+      for (int i = 0; i <= 60; i++)
+      {
+        WriteErrorMessage("CORRUPTED CHUNK: ", 3, i);
+        await Task.Delay(70);
+      }
+      await Task.Delay(2000);
+      ClearSpace(0, 0, 70, 40);
+
+      alive2 = false;
+    }
+
+    static void WriteErrorMessage(string text, int multiplier, int i)
+    {
+      Console.Write(text + i * multiplier + "%;");
+      Console.SetCursorPosition(0, i);
     }
   }                              
 }
